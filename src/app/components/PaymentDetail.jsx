@@ -75,7 +75,7 @@ const PaymentDetail = () => {
           <p className=" font-bold">$ 0.00</p>
         </div>
         <div className=" flex gap-4 mt-4 ">
-          <button className=" px-20 py-4  text-white rounded-lg font-medium">
+          <button className="bg-[#FE2C55]  text-center  px-20 py-4  text-white rounded-lg font-medium">
             Recharge
           </button>
           <button
