@@ -166,10 +166,10 @@ const PriceCards = ({ RechargeClick, HandleClick }) => {
             />
           </li>
         </ul>
-        <div className="flex gap-4">
+        {/* <div className="flex gap-4">
           <p>Total Coins</p>
           <p className="font-bold">{totalcoin.toFixed(2)}</p>
-        </div>
+        </div> */}
         <div className="flex gap-4">
           <p>Total Price</p>
           <p className="font-bold">$ {total.toFixed(2)}</p>
