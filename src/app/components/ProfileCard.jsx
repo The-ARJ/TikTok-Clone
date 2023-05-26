@@ -14,7 +14,7 @@ const ProfileCard = () => {
           <div className="text-base font-bold">Sheikh Alihab</div>
           <div className="flex items-center gap-2 text-gray-500">
             <svg
-              className="tiktok-kkwvro-StyledCoinIcon e4yj8b611"
+              className="tiktok-kkwvro-StyledCoinIcon e4yj8b61"
               width="1em"
               data-e2e=""
               height="1em"

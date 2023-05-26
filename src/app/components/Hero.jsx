@@ -268,8 +268,8 @@ const Hero = () => {
                   </h2>
                   <hr className="mb-6" />
                   <div className="flex justify-between mb-4">
-                    <p>Account:</p>
-                    <p>sheikh_alihab2</p>
+                    <p>Cardholder&apos;s Name:</p>
+                    <p>Alu Alihab Thani</p>
                   </div>
                   <div className="flex justify-between mb-4">
                     <p>Coins:</p>
