@@ -1,6 +1,6 @@
 import React from "react";
 
-const Recharge = () => {
+const RechargeDetail = () => {
   return (
     <>
       <div class=" text-[18px] font-bold flex gap-2 justify-center items-center">
@@ -32,4 +32,4 @@ const Recharge = () => {
   );
 };
 
-export default Recharge;
+export default RechargeDetail;

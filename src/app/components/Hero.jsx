@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import PriceCards from "./PriceCards";
-import PaymentDetail from "./PaymentDetail";
-import Recharge from "./Recharge";
+import RechargeDetail from "./RechargeDetail";
 import ProfileCard from "./ProfileCard";
 import success from "../../../public/assets/success.json";
 import Lottie from "lottie-react";
@@ -22,11 +21,17 @@ const Hero = () => {
   const handleClick = () => {
     setIsModalOpen(true);
   };
-
-  const handleRechargeClick = () => {
+  const handleRechargeClick = (coin, price) => {
+    setTotalDollar(price);
+    setInputValue(coin);
     setIsPaymentModalOpen(true);
     setIsModalOpen(false);
   };
+  const handleRecharge = () => {
+    setIsPaymentModalOpen(true);
+    setIsModalOpen(false);
+  };
+
   const handlePaymentClick = () => {
     setIsPaymentModalOpen(false);
     setIsModalOpen(false);
@@ -71,6 +76,7 @@ const Hero = () => {
       handlePaymentClick();
     }, 3000);
   };
+
   return (
     <>
       <section className="bg-cream -z-50">
@@ -139,9 +145,11 @@ const Hero = () => {
                 {searchQuery}
               </div>
             )}
-            <Recharge />
-            <PriceCards />
-            <PaymentDetail />
+            <RechargeDetail />
+            <PriceCards
+              HandleClick={handleClick}
+              RechargeClick={handleRechargeClick}
+            />
             {isModalOpen && (
               <div className="fixed inset-0 flex items-center justify-center z-50">
                 <div className="bg-white border border-gray-300 py-6 px-8 rounded-xl w-[700px]">
@@ -232,7 +240,7 @@ const Hero = () => {
                       </svg>
                     </button>
                     <button
-                      onClick={handleRechargeClick}
+                      onClick={handleRecharge}
                       className="bg-[#FE2C55] text-white text-center px-6 py-3 rounded-lg text-xl w-full"
                     >
                       Recharge
