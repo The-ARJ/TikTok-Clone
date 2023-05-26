@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'TikTok',
+  title: 'TikTok Coins: Buy and recharge',
 }
 
 export default function RootLayout({ children }) {
