@@ -343,14 +343,14 @@ const Hero = () => {
                     ></Lottie>
                   </div>
                   <div className=" text-center mb-4 text-3xl  mt-8">
-                    <p>Payment Complete</p>
+                    <p>Payment Completed</p>
                   </div>
 
-                  <div className="flex items-center justify-center mb-8 ">
+                  <div className=" text-center  mb-8 p-2">
                     <p className="">
-                      Thank you for your payment! Your transaction has been
-                      successfully completed.
+                      You recharged ${totalDollar} to Client Account
                     </p>
+                    <p className="">You can use coins to send virtual Gifts </p>
                   </div>
 
                   <div className=" flex gap-2">

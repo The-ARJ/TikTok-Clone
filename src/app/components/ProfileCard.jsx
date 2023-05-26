@@ -11,7 +11,7 @@ const ProfileCard = () => {
         ></img>
 
         <div className="">
-          <div className="text-base font-bold">sheikh_alihab2</div>
+          <div className="text-base font-bold">Sheikh Alihab</div>
           <div className="flex items-center gap-2 text-gray-500">
             <svg
               className="tiktok-kkwvro-StyledCoinIcon e4yj8b611"
@@ -35,7 +35,7 @@ const ProfileCard = () => {
                 fill="#FEF5CD"
               ></path>
             </svg>{" "}
-            <p className=" text-sm"> 79620</p>
+            <p className=" text-sm"> 796200</p>
           </div>
         </div>
       </div>
