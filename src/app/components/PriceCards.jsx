@@ -54,13 +54,13 @@ const PriceCards = ({ RechargeClick, HandleClick }) => {
 
   return (
     <>
-      <div className="px-2 grid cursor-pointer grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 md:gap-10 mt-4 justify-center mx-auto">
-        {cardData.map((card, index) => (
-          <div
-            className="w-full flex flex-col items-center py-4 px-8 md:px-20 md:py-10 border border-gray-200 hover:border-yellow-400 hover:border-2 rounded-md"
-            key={index}
-            onClick={() => handleCardClick(card.coin, card.price)}
-          >
+<div className="px-2 grid cursor-pointer grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 md:gap-10 mt-4 justify-center mx-auto">
+  {cardData.slice().reverse().map((card, index) => (
+    <div
+      className="w-full flex flex-col items-center py-4 px-8 md:px-20 md:py-10 border border-gray-200 hover:border-yellow-400 hover:border-2 rounded-md"
+      key={index}
+      onClick={() => handleCardClick(card.coin, card.price)}
+    >
             <div className="flex items-center gap-2 text-gray-500">
               <svg
                 className=" h-6
