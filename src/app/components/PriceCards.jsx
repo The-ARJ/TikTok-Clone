@@ -54,19 +54,19 @@ const PriceCards = ({ RechargeClick, HandleClick }) => {
 
   return (
     <>
-      <div className="md:grid cursor-pointer grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-14 mt-4">
+      <div className="grid cursor-pointer grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 md:gap-10 mt-4 justify-center mx-auto">
         {cardData.map((card, index) => (
           <div
-            className="w-full flex flex-col items-center h-36 pt-10 px-20 border border-gray-200 hover:border-yellow-400 hover:border-2 rounded-md"
+            className="w-full flex flex-col items-center py-4 px-8 md:px-20 md:py-10 border border-gray-200 hover:border-yellow-400 hover:border-2 rounded-md"
             key={index}
             onClick={() => handleCardClick(card.coin, card.price)}
           >
             <div className="flex items-center gap-2 text-gray-500">
               <svg
-                className="h-10 w-10"
+                className=" h-6
+                 w-6 md:h-10 md:w-10"
                 width=""
                 data-e2e=""
-                height="1em"
                 viewBox="0 0 48 48"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,14 +84,14 @@ const PriceCards = ({ RechargeClick, HandleClick }) => {
                   fill="#FEF5CD"
                 ></path>
               </svg>
-              <p className="text-2xl text-black font-bold">
+              <p className=" text-lg md:text-2xl text-black font-bold">
                 {typeof card.coin === "number"
                   ? card.coin.toLocaleString()
                   : card.coin}
               </p>
             </div>
             <p
-              className="text-gray-500 mt-2 font-semibold"
+              className="text-gray-500 mt-2  font-semibold"
               style={{ whiteSpace: "nowrap" }}
             >
               $ {card.price}
@@ -99,16 +99,9 @@ const PriceCards = ({ RechargeClick, HandleClick }) => {
           </div>
         ))}
       </div>
-      <div className="mt-4">
+      <div className="mt-4 px-4">
+        <p className="">Payment method</p>
         <ul className="flex justify-center items-center gap-2">
-          <li>
-            <span
-              data-e2e="wallet-title-payment-method"
-              className="tiktok-p0hyyy-SpanTotalText e1ndw46o2"
-            >
-              Payment method
-            </span>
-          </li>
           <li>
             <img
               src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/visa_light_c558fb.svg"
@@ -170,20 +163,20 @@ const PriceCards = ({ RechargeClick, HandleClick }) => {
           <p>Total Coins</p>
           <p className="font-bold">{totalcoin.toFixed(2)}</p>
         </div> */}
-        <div className="flex gap-4">
+        <div className="flex gap-4 mt-2">
           <p>Total Price</p>
           <p className="font-bold">$ {total.toFixed(2)}</p>
         </div>
-        <div className="flex gap-4 mt-4">
+        <div className="flex gap-4 mt-4 justify-center items-center ">
           <button
             onClick={handleRecharge}
-            className="bg-[#FE2C55] text-center px-20 py-4 text-white rounded-lg font-medium"
+            className="bg-[#FE2C55] text-center mb-10  px-10 md:px-20 py-3 w-full md:py-4 text-white rounded-lg "
           >
             Recharge
           </button>
           <button
             aria-label="FAQ"
-            className="fixed bottom-6 right-6 bg-gray-100 text-black text-2xl px-2 py-2 rounded-full"
+            className="fixed bottom-0 md:bottom-6 right-6 bg-gray-100 text-black text-2xl px-2 py-2 rounded-full"
           >
             <svg
               className="tiktok-ze008l-StyledQnMarkIcon e17zolsy3"

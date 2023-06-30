@@ -1,10 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { MdMenu } from "react-icons/md";
-import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
 import { GrAdd } from "react-icons/gr";
-import { FiSend } from "react-icons/fi";
 
 const Header = () => {
   const [isMenu, setIsMenu] = useState(false);
@@ -97,7 +95,7 @@ const Header = () => {
             </li>
             <li className="transform transition duration-300 ">
               <svg
-                class="tiktok-y48l9g-StyledIcon e1nx07zo1 text-3xl"
+                className="text-3xl"
                 width="1em"
                 data-e2e=""
                 height="1em"
@@ -115,7 +113,7 @@ const Header = () => {
             <li className="transform transition duration-300 ">
               <Link href="#about">
                 <svg
-                  class="tiktok-1g0p6jv-StyledInboxIcon e18kkhh41 text-3xl"
+                  className="tiktok-1g0p6jv-StyledInboxIcon e18kkhh41 text-3xl"
                   width="40"
                   data-e2e=""
                   height="40"
@@ -131,10 +129,6 @@ const Header = () => {
                 </svg>
               </Link>
             </li>
-
-            {/* <li>
-              <Dropdown name="OTHER SERVICES" />
-            </li> */}
             <Link href="/#contact" scroll={false}>
               <div className=" ">
                 <img
@@ -149,50 +143,69 @@ const Header = () => {
       </div>
 
       {/* Mobile Responsive */}
-      <div className="flex items-center justify-between md:hidden w-full h-14">
-        {/* Logo */}
-        <div
-          onClick={() => {
-            window.scrollTo(0, 0);
-          }}
-          className="relative flex items-center justify-center"
-        >
-          <a
-            href="#"
-            className="text-2xl relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline"
-          >
-            TikTok
-          </a>
-          <svg
-            className="h-11 z-40 absolute -top-2 -left-3"
-            viewBox="0 0 79 79"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M35.2574 2.24264C37.6005 -0.100501 41.3995 -0.100505 43.7426 2.24264L76.7574 35.2574C79.1005 37.6005 79.1005 41.3995 76.7574 43.7426L43.7426 76.7574C41.3995 79.1005 37.6005 79.1005 35.2574 76.7574L2.24264 43.7426C-0.100501 41.3995 -0.100505 37.6005 2.24264 35.2574L35.2574 2.24264Z"
-              fill="#2dd4bf"
-            />
-          </svg>
-        </div>
-
-        {/* Search Bar */}
-        <div className="flex items-center gap-4">
-          <input
-            type="text"
-            placeholder="Search"
-            className="border border-gray-300 rounded px-4 py-2 focus:outline-none"
-          />
+      <div className="flex items-center justify-between md:hidden w-full px-2 h-14">
+        <div className="relative transform transition duration-300 ">
+          <img src="./assets/logo.png" className="h-10" />
         </div>
 
         {/* Menu Dropdown */}
-        <div className="">
-          {!isMenu && (
-            <MdMenu
-              onClick={toggleMenu}
-              className="h-8 w-8 text-[#14b8a6] lg:hidden"
-            />
-          )}
+
+        <div className="flex items-center gap-2">
+          <ul className="flex items-center gap-2 xl:gap-10 md:text-base  py-6 text-xs cursor-pointer uppercase ">
+            <li className="transform transition duration-300 ">
+              <Link href="/" className="flex">
+                <button className="border border-gray-200 hover:bg-gray-100 px-4 py-2 flex items-center rounded-sm">
+                  <GrAdd className=" font-bold" />
+                  <p className="ml-2 font-medium">Upload</p>
+                </button>
+              </Link>
+            </li>
+            <li className="transform transition duration-300 ">
+              <svg
+                className="text-2xl"
+                width="1em"
+                data-e2e=""
+                height="1em"
+                viewBox="0 0 48 48"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2.17877 7.17357C2.50304 6.45894 3.21528 6 4.00003 6H44C44.713 6 45.372 6.37952 45.7299 6.99615C46.0877 7.61278 46.0902 8.37327 45.7365 8.99228L25.7365 43.9923C25.3423 44.6821 24.5772 45.0732 23.7872 44.9886C22.9972 44.9041 22.3321 44.3599 22.0929 43.6023L16.219 25.0017L2.49488 9.31701C1.97811 8.72642 1.85449 7.88819 2.17877 7.17357ZM20.377 24.8856L24.531 38.0397L40.5537 10H8.40757L18.3918 21.4106L30.1002 14.2054C30.5705 13.9159 31.1865 14.0626 31.4759 14.533L32.5241 16.2363C32.8136 16.7066 32.6669 17.3226 32.1966 17.612L20.377 24.8856Z"
+                ></path>
+              </svg>{" "}
+            </li>
+            <li className="transform transition duration-300 ">
+              <Link href="#">
+                <svg
+                  className="text-2xl"
+                  width="40"
+                  data-e2e=""
+                  height="40"
+                  viewBox="0 0 32 32"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M24.0362 21.3333H18.5243L15.9983 24.4208L13.4721 21.3333H7.96047L7.99557 8H24.0009L24.0362 21.3333ZM24.3705 23.3333H19.4721L17.2883 26.0026C16.6215 26.8176 15.3753 26.8176 14.7084 26.0026L12.5243 23.3333H7.62626C6.70407 23.3333 5.95717 22.5845 5.9596 21.6623L5.99646 7.66228C5.99887 6.74352 6.74435 6 7.66312 6H24.3333C25.2521 6 25.9975 6.7435 26 7.66224L26.0371 21.6622C26.0396 22.5844 25.2927 23.3333 24.3705 23.3333ZM12.6647 14C12.2965 14 11.998 14.2985 11.998 14.6667V15.3333C11.998 15.7015 12.2965 16 12.6647 16H19.3313C19.6995 16 19.998 15.7015 19.998 15.3333V14.6667C19.998 14.2985 19.6995 14 19.3313 14H12.6647Z"
+                  ></path>
+                </svg>
+              </Link>
+            </li>
+            <Link href="#" scroll={false}>
+              <div className=" ">
+                <img
+                  src="./assets/pp.jpg"
+                  className=" rounded-full h-8 w-8 object-cover"
+                  alt=""
+                />
+              </div>
+            </Link>
+          </ul>
         </div>
       </div>
     </header>
