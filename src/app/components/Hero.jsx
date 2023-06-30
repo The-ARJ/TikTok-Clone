@@ -89,7 +89,7 @@ const Hero = () => {
         <div className="max-w-screen-lg mx-auto bg-white ">
           <div className=" hidden md:fixed md:block  left-0 -z-50  ">
             <img
-              src="./assets/rollsroyce.png"
+              src="./assets/rolls.jpg"
               alt=""
               className=" h-[700px]  border rounded-lg"
             />
