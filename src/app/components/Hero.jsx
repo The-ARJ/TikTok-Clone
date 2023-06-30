@@ -83,9 +83,17 @@ const Hero = () => {
 
   return (
     <>
-      <section className="bg-cream -z-50">
-        <div className="max-w-screen-xl mx-auto ">
-          {/* for rollsroyace */}
+      <section className="bg-cream ">
+        {/* for rollsroyace */}
+        <div className=" fixed  left-5 -z-50  ">
+          <img
+            src="./assets/rolls.jpg"
+            alt=""
+            className=" h-96 w-56 object-cover border rounded-lg"
+          />
+          <p className=" text-center m-4 font-bold">Wait 24hr for the Update</p>
+        </div>
+        <div className="max-w-screen-lg mx-auto bg-white ">
           <HeroTopSection />
           <div className="flex flex-col  justify-center items-start lg:text-left">
             <SearchUser
