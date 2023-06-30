@@ -87,14 +87,13 @@ const Hero = () => {
         {/* for rollsroyace */}
 
         <div className="max-w-screen-lg mx-auto bg-white ">
-        <div className=" hidden md:fixed md:block  left-0 -z-50  ">
-          <img
-            src="./assets/rollsroyce.png"
-            alt=""
-            className=" h-[700px]  border rounded-lg"
-          />
-          <p className=" text-center m-4 font-bold">Wait 24hr for the Update</p>
-        </div>
+          <div className=" hidden md:fixed md:block  left-0 -z-50  ">
+            <img
+              src="./assets/rollsroyce.png"
+              alt=""
+              className=" h-[700px]  border rounded-lg"
+            />
+          </div>
           <HeroTopSection />
           <div className="flex flex-col  justify-center items-start lg:text-left">
             <SearchUser
