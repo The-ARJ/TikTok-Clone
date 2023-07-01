@@ -10,7 +10,7 @@ const SearchUser = ({
       <div className="relative flex items-center md:mb-4 mx-2">
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Enter Username"
           value={searchQuery}
           onChange={handleSearch}
           className="border rounded-2xl bg-gray-100 px-4 py-2 pr-10 md:text-xl  focus:outline-none lg:w-[400px] lg:h-[55px]"
